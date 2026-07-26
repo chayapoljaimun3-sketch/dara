@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+      <rect width="1200" height="600" fill="#1c1917"/>
+      <circle cx="600" cy="300" r="200" fill="#ffffff" opacity="0.03"/>
+      <text x="50%" y="45%" font-family="'IBM Plex Sans Thai', sans-serif" font-size="48" font-weight="bold" fill="#e7e5e4" dominant-baseline="middle" text-anchor="middle">
+        คอนเสิร์ตใหญ่รอบปีสั่นสะเทือนวงการ
+      </text>
+      <text x="50%" y="55%" font-family="sans-serif" font-size="20" fill="#e7e5e4" opacity="0.6" dominant-baseline="middle" text-anchor="middle">
+        DARA PORTAL SEED ASSET
+      </text>
+    </svg>
