@@ -62,7 +62,7 @@ export default function UsersPage() {
       <div className="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
         <div className="px-6 py-4 border-b border-slate-800 flex items-center justify-between">
           <h3 className="font-semibold text-white flex items-center gap-2">
-            <ShieldCheck className="w-5 h-5 text-violet-400" />
+            <ShieldCheck className="w-5 h-5 text-rose-400" />
             รายชื่อผู้ใช้ในระบบ
           </h3>
         </div>
@@ -88,7 +88,7 @@ export default function UsersPage() {
                   <tr key={u.id} className="hover:bg-slate-900/40 transition">
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-full bg-violet-600/15 border border-violet-500/20 flex items-center justify-center text-violet-400 font-semibold text-sm">
+                        <div className="w-8 h-8 rounded-full bg-rose-600/15 border border-rose-500/20 flex items-center justify-center text-rose-400 font-semibold text-sm">
                           {u.name.charAt(0).toUpperCase()}
                         </div>
                         <span className="text-white font-medium">{u.name}</span>
@@ -104,13 +104,13 @@ export default function UsersPage() {
                           disabled={loadingId === u.id}
                           value={u.roleId}
                           onChange={(e) => handleRoleChange(u.id, parseInt(e.target.value))}
-                          className="bg-slate-900 border border-slate-800 text-white rounded-lg px-2.5 py-1 text-xs focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition disabled:opacity-50"
+                          className="bg-slate-900 border border-slate-800 text-white rounded-lg px-2.5 py-1 text-xs focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 transition disabled:opacity-50"
                         >
                           <option value="1">Admin (ผู้ดูแลระบบ)</option>
                           <option value="2">Writer (ผู้เขียนข่าว)</option>
                         </select>
                         {loadingId === u.id && (
-                          <div className="w-3.5 h-3.5 border-2 border-violet-500 border-t-transparent rounded-full animate-spin" />
+                          <div className="w-3.5 h-3.5 border-2 border-rose-500 border-t-transparent rounded-full animate-spin" />
                         )}
                       </div>
                     </td>

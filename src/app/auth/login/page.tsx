@@ -49,13 +49,13 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4 py-12 relative overflow-hidden">
       {/* Background glowing effects */}
-      <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-violet-600/10 blur-[120px] pointer-events-none" />
+      <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-rose-600/10 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] rounded-full bg-cyan-500/10 blur-[120px] pointer-events-none" />
 
       <div className="w-full max-w-md bg-slate-950/80 backdrop-blur-md border border-slate-800 p-8 rounded-2xl shadow-2xl relative z-10">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold tracking-tight text-white mb-2">
-            เข้าสู่ระบบ <span className="text-violet-400">DARA</span>
+            เข้าสู่ระบบ <span className="text-rose-400">DARA</span>
           </h1>
           <p className="text-slate-400 text-sm">เข้าสู่ระบบแผงควบคุมการจัดการสำหรับผู้ดูแลและผู้เขียน</p>
         </div>
@@ -77,7 +77,7 @@ export default function LoginPage() {
               required
               value={loginInput}
               onChange={(e) => setLoginInput(e.target.value)}
-              className="w-full bg-slate-900 border border-slate-800 text-white rounded-lg px-3.5 py-2 text-sm focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition"
+              className="w-full bg-slate-900 border border-slate-800 text-white rounded-lg px-3.5 py-2 text-sm focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 transition"
               placeholder="กรอกชื่อผู้ใช้งาน หรืออีเมลของคุณ"
             />
           </div>
@@ -94,7 +94,7 @@ export default function LoginPage() {
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full bg-slate-900 border border-slate-800 text-white rounded-lg px-3.5 py-2 text-sm focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition"
+              className="w-full bg-slate-900 border border-slate-800 text-white rounded-lg px-3.5 py-2 text-sm focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 transition"
               placeholder="••••••••"
             />
           </div>
@@ -102,7 +102,7 @@ export default function LoginPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-violet-600 hover:bg-violet-700 active:bg-violet-800 text-white rounded-lg py-2.5 text-sm font-medium shadow-lg hover:shadow-violet-600/20 transition cursor-pointer disabled:opacity-50 mt-6"
+            className="w-full bg-rose-600 hover:bg-rose-700 active:bg-rose-800 text-white rounded-lg py-2.5 text-sm font-medium shadow-lg hover:shadow-rose-600/20 transition cursor-pointer disabled:opacity-50 mt-6"
           >
             {loading ? "กำลังเข้าสู่ระบบ..." : "เข้าสู่ระบบ"}
           </button>
@@ -110,7 +110,7 @@ export default function LoginPage() {
 
         <div className="text-center mt-6 text-slate-400 text-sm">
           ยังไม่มีบัญชีผู้ใช้งาน?{" "}
-          <Link href="/auth/register" className="text-violet-400 hover:text-violet-300 font-medium transition">
+          <Link href="/auth/register" className="text-rose-400 hover:text-rose-300 font-medium transition">
             สมัครสมาชิก
           </Link>
         </div>

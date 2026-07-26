@@ -83,15 +83,15 @@ export default function HomeClient({ banners, categories, posts, pages, isAdmin 
   }
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans antialiased selection:bg-violet-500 selection:text-white pb-16">
+    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans antialiased selection:bg-rose-500 selection:text-white pb-16">
       {/* 1. Header/Navbar */}
       <header className="sticky top-0 z-40 w-full border-b border-slate-900 bg-slate-950/80 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="h-9 w-9 rounded-xl bg-gradient-to-tr from-violet-600 to-indigo-500 flex items-center justify-center shadow-lg shadow-violet-500/20">
+            <div className="h-9 w-9 rounded-xl bg-gradient-to-tr from-rose-600 to-red-500 flex items-center justify-center shadow-lg shadow-rose-500/20">
               <span className="font-extrabold text-white text-lg tracking-wider">D</span>
             </div>
-            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-violet-400">
+            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-rose-400">
               DARA PORTAL
             </span>
           </div>
@@ -100,7 +100,7 @@ export default function HomeClient({ banners, categories, posts, pages, isAdmin 
             {isAdmin ? (
               <a
                 href="/admin/dashboard"
-                className="flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium bg-violet-600 hover:bg-violet-700 text-white shadow-lg hover:shadow-violet-600/20 transition cursor-pointer"
+                className="flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium bg-rose-600 hover:bg-rose-700 text-white shadow-lg hover:shadow-rose-600/20 transition cursor-pointer"
               >
                 เข้าสู่แผงควบคุม
                 <ArrowRight className="w-4 h-4" />
@@ -139,7 +139,7 @@ export default function HomeClient({ banners, categories, posts, pages, isAdmin 
                 
                 {/* Banner Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12 z-20 max-w-3xl">
-                  <span className="inline-block px-2.5 py-1 mb-3 text-xs font-semibold uppercase tracking-wider text-violet-400 bg-violet-500/10 border border-violet-500/20 rounded-full">
+                  <span className="inline-block px-2.5 py-1 mb-3 text-xs font-semibold uppercase tracking-wider text-rose-400 bg-rose-500/10 border border-rose-500/20 rounded-full">
                     ข่าวเด่นวันนี้
                   </span>
                   <h2 className="text-2xl md:text-4xl font-bold text-white tracking-tight leading-tight mb-2">
@@ -148,7 +148,7 @@ export default function HomeClient({ banners, categories, posts, pages, isAdmin 
                   {banner.linkUrl && (
                     <a
                       href={banner.linkUrl}
-                      className="inline-flex items-center gap-1 text-sm font-medium text-violet-400 hover:text-violet-300 transition mt-2"
+                      className="inline-flex items-center gap-1 text-sm font-medium text-rose-400 hover:text-rose-300 transition mt-2"
                     >
                       อ่านรายละเอียดเพิ่มเติม
                       <ArrowRight className="w-4 h-4" />
@@ -181,7 +181,7 @@ export default function HomeClient({ banners, categories, posts, pages, isAdmin 
                       key={index}
                       onClick={() => setActiveBanner(index)}
                       className={`h-2 rounded-full transition-all duration-300 ${
-                        index === activeBanner ? "w-6 bg-violet-500" : "w-2 bg-slate-800"
+                        index === activeBanner ? "w-6 bg-rose-500" : "w-2 bg-slate-800"
                       }`}
                     />
                   ))}
@@ -201,7 +201,7 @@ export default function HomeClient({ banners, categories, posts, pages, isAdmin 
           {/* Filters & Search */}
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between border-b border-slate-900 pb-5">
             <h3 className="text-xl font-bold text-white flex items-center gap-2">
-              <BookOpen className="w-5 h-5 text-violet-500" />
+              <BookOpen className="w-5 h-5 text-rose-500" />
               บทความและข่าวสารล่าสุด
             </h3>
 
@@ -213,7 +213,7 @@ export default function HomeClient({ banners, categories, posts, pages, isAdmin 
                 placeholder="ค้นหาหัวข้อ หรือ เนื้อหาข่าว..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-9 pr-4 py-2 bg-slate-900 border border-slate-850 rounded-lg text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition"
+                className="w-full pl-9 pr-4 py-2 bg-slate-900 border border-slate-850 rounded-lg text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 transition"
               />
             </div>
           </div>
@@ -224,7 +224,7 @@ export default function HomeClient({ banners, categories, posts, pages, isAdmin 
               onClick={() => setSelectedCategory(null)}
               className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition cursor-pointer ${
                 selectedCategory === null
-                  ? "bg-violet-600 text-white shadow-lg shadow-violet-500/10"
+                  ? "bg-rose-600 text-white shadow-lg shadow-rose-500/10"
                   : "bg-slate-900 text-slate-400 hover:text-white border border-slate-850"
               }`}
             >
@@ -236,7 +236,7 @@ export default function HomeClient({ banners, categories, posts, pages, isAdmin 
                 onClick={() => setSelectedCategory(cat.id)}
                 className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition cursor-pointer ${
                   selectedCategory === cat.id
-                    ? "bg-violet-600 text-white shadow-lg shadow-violet-500/10"
+                    ? "bg-rose-600 text-white shadow-lg shadow-rose-500/10"
                     : "bg-slate-900 text-slate-400 hover:text-white border border-slate-850"
                 }`}
               >
@@ -277,7 +277,7 @@ export default function HomeClient({ banners, categories, posts, pages, isAdmin 
                       {post.categories.map((c) => (
                         <span
                           key={c.id}
-                          className="px-2 py-0.5 text-[10px] font-semibold bg-slate-950/80 backdrop-blur-sm text-violet-400 border border-violet-500/20 rounded"
+                          className="px-2 py-0.5 text-[10px] font-semibold bg-slate-950/80 backdrop-blur-sm text-rose-400 border border-rose-500/20 rounded"
                         >
                           {c.name}
                         </span>
@@ -288,7 +288,7 @@ export default function HomeClient({ banners, categories, posts, pages, isAdmin 
                   {/* Body Content */}
                   <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
                     <div className="space-y-2">
-                      <h4 className="text-lg font-bold text-white group-hover:text-violet-400 transition leading-snug line-clamp-2">
+                      <h4 className="text-lg font-bold text-white group-hover:text-rose-400 transition leading-snug line-clamp-2">
                         {post.title}
                       </h4>
                       {/* Short Description */}
@@ -339,8 +339,8 @@ export default function HomeClient({ banners, categories, posts, pages, isAdmin 
           </div>
 
           {/* Connect Panel Widget */}
-          <div className="bg-gradient-to-tr from-indigo-950/30 to-violet-950/30 border border-violet-950/40 rounded-2xl p-6 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-24 h-24 bg-violet-600/10 rounded-full blur-2xl" />
+          <div className="bg-gradient-to-tr from-red-950/30 to-rose-950/30 border border-rose-950/40 rounded-2xl p-6 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-24 h-24 bg-rose-600/10 rounded-full blur-2xl" />
             <h4 className="text-base font-bold text-white mb-2">
               ร่วมเขียนข่าวสารกับเรา?
             </h4>
@@ -369,7 +369,7 @@ export default function HomeClient({ banners, categories, posts, pages, isAdmin 
             {/* Modal Header */}
             <div className="p-4 md:p-6 border-b border-slate-800 flex items-center justify-between bg-slate-950/40">
               <div className="flex items-center gap-2">
-                <span className="px-2.5 py-1 text-xs font-semibold bg-violet-500/10 border border-violet-500/20 text-violet-400 rounded-full">
+                <span className="px-2.5 py-1 text-xs font-semibold bg-rose-500/10 border border-rose-500/20 text-rose-400 rounded-full">
                   ข่าวและบทความ
                 </span>
                 <span className="text-slate-500 text-xs hidden sm:inline">•</span>
@@ -418,7 +418,7 @@ export default function HomeClient({ banners, categories, posts, pages, isAdmin 
 
               {/* Rich-Text content */}
               <div
-                className="prose prose-invert max-w-none prose-headings:text-white prose-p:text-slate-300 prose-p:leading-relaxed prose-strong:text-white prose-a:text-violet-400 prose-blockquote:border-l-4 prose-blockquote:border-violet-500 prose-blockquote:pl-4 prose-blockquote:italic text-slate-300"
+                className="prose prose-invert max-w-none prose-headings:text-white prose-p:text-slate-300 prose-p:leading-relaxed prose-strong:text-white prose-a:text-rose-400 prose-blockquote:border-l-4 prose-blockquote:border-rose-500 prose-blockquote:pl-4 prose-blockquote:italic text-slate-300"
                 dangerouslySetInnerHTML={{ __html: selectedPost.content || "" }}
               />
             </div>

@@ -62,10 +62,19 @@ async function main() {
     return `/uploads/${filename}`
   }
 
+  const getBannerImage = (index, title, bgColor, textColor) => {
+    const pngName = `seed-banner-${index + 1}.png`
+    const pngPath = path.join(uploadDir, pngName)
+    if (fs.existsSync(pngPath)) {
+      return `/uploads/${pngName}`
+    }
+    return createSvgImage(`seed-banner-${index + 1}.svg`, title, bgColor, textColor)
+  }
+
   const bannerImages = [
-    createSvgImage("seed-banner-1.svg", "ยินดีต้อนรับสู่ DARA Portal", "#1e1b4b", "#c084fc"),
-    createSvgImage("seed-banner-2.svg", "อัพเดทวงการเทคโนโลยีและนวัตกรรมใหม่", "#064e3b", "#34d399"),
-    createSvgImage("seed-banner-3.svg", "เกาะติดทุกสถานการณ์ข่าวด่วน 24 ชั่วโมง", "#7f1d1d", "#f87171"),
+    getBannerImage(0, "ยินดีต้อนรับสู่ DARA Portal", "#1e1b4b", "#c084fc"),
+    getBannerImage(1, "อัพเดทวงการเทคโนโลยีและนวัตกรรมใหม่", "#064e3b", "#34d399"),
+    getBannerImage(2, "เกาะติดทุกสถานการณ์ข่าวด่วน 24 ชั่วโมง", "#7f1d1d", "#f87171"),
   ]
 
   const postImages = [

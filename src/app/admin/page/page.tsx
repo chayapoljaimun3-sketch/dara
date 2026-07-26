@@ -102,7 +102,7 @@ export default function PagesManagementPage() {
         {!showForm && (
           <button
             onClick={handleOpenCreate}
-            className="bg-violet-600 hover:bg-violet-700 active:bg-violet-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition cursor-pointer flex items-center gap-2 shadow-lg hover:shadow-violet-600/10"
+            className="bg-rose-600 hover:bg-rose-700 active:bg-rose-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition cursor-pointer flex items-center gap-2 shadow-lg hover:shadow-rose-600/10"
           >
             <FilePlus className="w-4 h-4" />
             สร้างหน้าเพจใหม่
@@ -141,7 +141,7 @@ export default function PagesManagementPage() {
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
                   placeholder="เช่น เกี่ยวกับเรา"
-                  className="w-full bg-slate-900 border border-slate-800 text-white rounded-lg px-3.5 py-2 text-sm focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition"
+                  className="w-full bg-slate-900 border border-slate-800 text-white rounded-lg px-3.5 py-2 text-sm focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 transition"
                 />
               </div>
               <div>
@@ -155,7 +155,7 @@ export default function PagesManagementPage() {
                   value={slug}
                   onChange={(e) => setSlug(e.target.value)}
                   placeholder="เช่น about-us"
-                  className="w-full bg-slate-900 border border-slate-800 text-white rounded-lg px-3.5 py-2 text-sm focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition font-mono"
+                  className="w-full bg-slate-900 border border-slate-800 text-white rounded-lg px-3.5 py-2 text-sm focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 transition font-mono"
                 />
               </div>
             </div>
@@ -170,7 +170,7 @@ export default function PagesManagementPage() {
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
                 placeholder="กรอกเนื้อหาสำหรับหน้าเพจนี้..."
-                className="w-full bg-slate-900 border border-slate-800 text-white rounded-lg px-3.5 py-2 text-sm focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition font-sans"
+                className="w-full bg-slate-900 border border-slate-800 text-white rounded-lg px-3.5 py-2 text-sm focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 transition font-sans"
               />
             </div>
 
@@ -180,7 +180,7 @@ export default function PagesManagementPage() {
                 id="published"
                 checked={published}
                 onChange={(e) => setPublished(e.target.checked)}
-                className="rounded text-violet-600 focus:ring-violet-500 bg-slate-900 border-slate-800 cursor-pointer"
+                className="rounded text-rose-600 focus:ring-rose-500 bg-slate-900 border-slate-800 cursor-pointer"
               />
               <label htmlFor="published" className="text-slate-300 text-sm cursor-pointer select-none">
                 เผยแพร่หน้านี้ทันที (Published)
@@ -191,7 +191,7 @@ export default function PagesManagementPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="bg-violet-600 hover:bg-violet-700 active:bg-violet-800 text-white px-5 py-2 rounded-lg text-sm font-medium transition cursor-pointer disabled:opacity-50"
+                className="bg-rose-600 hover:bg-rose-700 active:bg-rose-800 text-white px-5 py-2 rounded-lg text-sm font-medium transition cursor-pointer disabled:opacity-50"
               >
                 {loading ? "กำลังบันทึก..." : "บันทึกข้อมูล"}
               </button>
@@ -251,7 +251,7 @@ export default function PagesManagementPage() {
                         <div className="flex items-center justify-end gap-1.5">
                           <button
                             onClick={() => handleOpenEdit(p)}
-                            className="p-1.5 bg-violet-500/10 hover:bg-violet-500/20 text-violet-400 rounded transition cursor-pointer"
+                            className="p-1.5 bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 rounded transition cursor-pointer"
                           >
                             <Edit3 className="w-4 h-4" />
                           </button>

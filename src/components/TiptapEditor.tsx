@@ -49,7 +49,7 @@ export default function TiptapEditor({ value, onChange }: TiptapEditorProps) {
   const toolbarBtnClass = (active: boolean) => 
     `p-1.5 rounded transition cursor-pointer ${
       active 
-        ? "bg-violet-600 text-white" 
+        ? "bg-rose-600 text-white" 
         : "text-slate-400 hover:text-white hover:bg-slate-800"
     }`
 

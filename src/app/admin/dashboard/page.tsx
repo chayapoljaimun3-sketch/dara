@@ -10,7 +10,7 @@ export default async function DashboardPage() {
       value: stats.usersCount, 
       desc: "บัญชีผู้ใช้งานระบบจัดการ", 
       icon: Users, 
-      color: "from-blue-600/20 to-indigo-600/20 border-blue-500/30 text-blue-400" 
+      color: "from-blue-600/20 to-red-600/20 border-blue-500/30 text-blue-400" 
     },
     { 
       name: "ข่าวสารทั้งหมด", 
@@ -31,7 +31,7 @@ export default async function DashboardPage() {
       value: stats.pagesCount, 
       desc: "หน้าเนื้อหาคงที่ของเว็บไซต์", 
       icon: FileText, 
-      color: "from-violet-600/20 to-fuchsia-600/20 border-violet-500/30 text-violet-400" 
+      color: "from-rose-600/20 to-fuchsia-600/20 border-rose-500/30 text-rose-400" 
     },
     { 
       name: "แบนเนอร์สไลด์", 

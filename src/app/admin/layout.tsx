@@ -58,7 +58,7 @@ export default async function AdminLayout({
         <div>
           {/* Logo / Portal Title */}
           <div className="h-16 flex items-center px-6 border-b border-slate-800">
-            <span className="text-xl font-bold tracking-wider text-violet-400">DARA ADMIN</span>
+            <span className="text-xl font-bold tracking-wider text-rose-500 font-extrabold">DARA ADMIN</span>
           </div>
 
           {/* Navigation Links */}
@@ -71,7 +71,7 @@ export default async function AdminLayout({
                   href={item.href}
                   className="flex items-center gap-3 px-4 py-2.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-900 transition-colors font-medium text-sm group"
                 >
-                  <item.icon className="w-4.5 h-4.5 text-slate-400 group-hover:text-violet-400 transition-colors" />
+                  <item.icon className="w-4.5 h-4.5 text-slate-400 group-hover:text-rose-500 font-extrabold transition-colors" />
                   {item.name}
                 </Link>
               )
@@ -82,13 +82,13 @@ export default async function AdminLayout({
         {/* User Footer Profile & Logout Info */}
         <div className="p-4 border-t border-slate-800 space-y-4">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-violet-600/20 border border-violet-500/30 flex items-center justify-center shrink-0">
-              <UserIcon className="w-5 h-5 text-violet-400" />
+            <div className="w-10 h-10 rounded-full bg-rose-600/20 border border-rose-500/30 flex items-center justify-center shrink-0">
+              <UserIcon className="w-5 h-5 text-rose-500 font-extrabold" />
             </div>
             <div className="overflow-hidden">
               <p className="text-sm font-semibold text-white truncate">{user.name}</p>
               <p className="text-xs text-slate-400 truncate">
-                @{user.username || "user"} • <span className="text-violet-400 font-medium uppercase">{userRole}</span>
+                @{user.username || "user"} • <span className="text-rose-500 font-extrabold font-medium uppercase">{userRole}</span>
               </p>
             </div>
           </div>

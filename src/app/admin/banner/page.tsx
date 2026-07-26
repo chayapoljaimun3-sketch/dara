@@ -131,7 +131,7 @@ export default function BannerManagementPage() {
         {!showForm && (
           <button
             onClick={handleOpenCreate}
-            className="bg-violet-600 hover:bg-violet-700 active:bg-violet-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition cursor-pointer flex items-center gap-2 shadow-lg hover:shadow-violet-600/10"
+            className="bg-rose-600 hover:bg-rose-700 active:bg-rose-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition cursor-pointer flex items-center gap-2 shadow-lg hover:shadow-rose-600/10"
           >
             <Plus className="w-4.5 h-4.5" />
             เพิ่มแบนเนอร์ใหม่
@@ -171,7 +171,7 @@ export default function BannerManagementPage() {
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                     placeholder="เช่น แบนเนอร์เปิดตัวเว็บใหม่"
-                    className="w-full bg-slate-900 border border-slate-800 text-white rounded-lg px-3.5 py-2 text-sm focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition"
+                    className="w-full bg-slate-900 border border-slate-800 text-white rounded-lg px-3.5 py-2 text-sm focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 transition"
                   />
                 </div>
 
@@ -185,7 +185,7 @@ export default function BannerManagementPage() {
                     value={linkUrl}
                     onChange={(e) => setLinkUrl(e.target.value)}
                     placeholder="เช่น /news/1 หรือ https://example.com"
-                    className="w-full bg-slate-900 border border-slate-800 text-white rounded-lg px-3.5 py-2 text-sm focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition"
+                    className="w-full bg-slate-900 border border-slate-800 text-white rounded-lg px-3.5 py-2 text-sm focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 transition"
                   />
                 </div>
 
@@ -201,7 +201,7 @@ export default function BannerManagementPage() {
                       value={order}
                       onChange={(e) => setOrder(e.target.value)}
                       placeholder="0"
-                      className="w-full bg-slate-900 border border-slate-800 text-white rounded-lg px-3.5 py-2 text-sm focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition font-mono"
+                      className="w-full bg-slate-900 border border-slate-800 text-white rounded-lg px-3.5 py-2 text-sm focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 transition font-mono"
                     />
                   </div>
                   <div className="flex flex-col justify-end pb-2">
@@ -211,7 +211,7 @@ export default function BannerManagementPage() {
                         id="active"
                         checked={active}
                         onChange={(e) => setActive(e.target.checked)}
-                        className="rounded text-violet-600 focus:ring-violet-500 bg-slate-900 border-slate-800 cursor-pointer"
+                        className="rounded text-rose-600 focus:ring-rose-500 bg-slate-900 border-slate-800 cursor-pointer"
                       />
                       <label htmlFor="active" className="text-slate-300 text-sm cursor-pointer select-none">
                         แสดงแบนเนอร์นี้
@@ -239,7 +239,7 @@ export default function BannerManagementPage() {
                   type="file"
                   accept="image/*"
                   onChange={handleFileChange}
-                  className="block w-full text-xs text-slate-400 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-violet-600 file:text-white hover:file:bg-violet-700 file:cursor-pointer cursor-pointer"
+                  className="block w-full text-xs text-slate-400 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-rose-600 file:text-white hover:file:bg-rose-700 file:cursor-pointer cursor-pointer"
                 />
               </div>
             </div>
@@ -248,7 +248,7 @@ export default function BannerManagementPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="bg-violet-600 hover:bg-violet-700 active:bg-violet-800 text-white px-5 py-2 rounded-lg text-sm font-medium transition cursor-pointer disabled:opacity-50"
+                className="bg-rose-600 hover:bg-rose-700 active:bg-rose-800 text-white px-5 py-2 rounded-lg text-sm font-medium transition cursor-pointer disabled:opacity-50"
               >
                 {loading ? "กำลังบันทึก..." : "บันทึกข้อมูล"}
               </button>
@@ -293,7 +293,7 @@ export default function BannerManagementPage() {
                   </div>
 
                   {/* Order badge */}
-                  <div className="absolute top-3 right-3 w-7 h-7 rounded-full bg-slate-950/80 border border-slate-800 flex items-center justify-center text-xs font-bold text-violet-400 backdrop-blur-md">
+                  <div className="absolute top-3 right-3 w-7 h-7 rounded-full bg-slate-950/80 border border-slate-800 flex items-center justify-center text-xs font-bold text-rose-400 backdrop-blur-md">
                     #{b.order}
                   </div>
                 </div>
@@ -311,7 +311,7 @@ export default function BannerManagementPage() {
                   <div className="flex items-center justify-end gap-2 border-t border-slate-900 pt-4 mt-auto">
                     <button
                       onClick={() => handleOpenEdit(b)}
-                      className="flex items-center gap-1.5 px-3 py-1.5 bg-violet-500/10 hover:bg-violet-500/20 text-violet-400 text-xs rounded-lg font-medium transition cursor-pointer"
+                      className="flex items-center gap-1.5 px-3 py-1.5 bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 text-xs rounded-lg font-medium transition cursor-pointer"
                     >
                       <Edit3 className="w-3.5 h-3.5" /> แก้ไข
                     </button>

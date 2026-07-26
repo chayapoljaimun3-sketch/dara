@@ -150,7 +150,7 @@ export default function PostManagement({ initialPosts, categories, userId }: Pos
         {!showForm && (
           <button
             onClick={handleOpenCreate}
-            className="bg-violet-600 hover:bg-violet-700 active:bg-violet-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition cursor-pointer flex items-center gap-2 shadow-lg hover:shadow-violet-600/10"
+            className="bg-rose-600 hover:bg-rose-700 active:bg-rose-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition cursor-pointer flex items-center gap-2 shadow-lg hover:shadow-rose-600/10"
           >
             <Plus className="w-4.5 h-4.5" />
             เขียนข่าวสารใหม่
@@ -192,7 +192,7 @@ export default function PostManagement({ initialPosts, categories, userId }: Pos
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
                     placeholder="กรอกพาดหัวข่าวที่ดึงดูดความสนใจ"
-                    className="w-full bg-slate-900 border border-slate-800 text-white rounded-lg px-3.5 py-2 text-sm focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition"
+                    className="w-full bg-slate-900 border border-slate-800 text-white rounded-lg px-3.5 py-2 text-sm focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 transition"
                   />
                 </div>
 
@@ -225,7 +225,7 @@ export default function PostManagement({ initialPosts, categories, userId }: Pos
                     type="file"
                     accept="image/*"
                     onChange={handleFileChange}
-                    className="block w-full text-xs text-slate-400 file:mr-4 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-violet-600 file:text-white hover:file:bg-violet-700 file:cursor-pointer cursor-pointer"
+                    className="block w-full text-xs text-slate-400 file:mr-4 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-rose-600 file:text-white hover:file:bg-rose-700 file:cursor-pointer cursor-pointer"
                   />
                 </div>
 
@@ -242,7 +242,7 @@ export default function PostManagement({ initialPosts, categories, userId }: Pos
                             type="checkbox"
                             checked={selectedCategories.includes(cat.id)}
                             onChange={() => handleCategoryToggle(cat.id)}
-                            className="rounded text-violet-600 focus:ring-violet-500 bg-slate-900 border-slate-800 cursor-pointer"
+                            className="rounded text-rose-600 focus:ring-rose-500 bg-slate-900 border-slate-800 cursor-pointer"
                           />
                           <span>{cat.name}</span>
                         </label>
@@ -258,7 +258,7 @@ export default function PostManagement({ initialPosts, categories, userId }: Pos
                     id="published"
                     checked={published}
                     onChange={(e) => setPublished(e.target.checked)}
-                    className="rounded text-violet-600 focus:ring-violet-500 bg-slate-900 border-slate-800 cursor-pointer"
+                    className="rounded text-rose-600 focus:ring-rose-500 bg-slate-900 border-slate-800 cursor-pointer"
                   />
                   <label htmlFor="published" className="text-slate-300 text-sm cursor-pointer select-none">
                     เผยแพร่ข่าวนี้ทันที (Published)
@@ -272,7 +272,7 @@ export default function PostManagement({ initialPosts, categories, userId }: Pos
               <button
                 type="submit"
                 disabled={loading}
-                className="bg-violet-600 hover:bg-violet-700 active:bg-violet-800 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition cursor-pointer disabled:opacity-50"
+                className="bg-rose-600 hover:bg-rose-700 active:bg-rose-800 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition cursor-pointer disabled:opacity-50"
               >
                 {loading ? "กำลังบันทึก..." : "บันทึกและปิด"}
               </button>
@@ -332,7 +332,7 @@ export default function PostManagement({ initialPosts, categories, userId }: Pos
                     {/* Categories list */}
                     <div className="flex flex-wrap gap-1">
                       {p.categories.map((c) => (
-                        <span key={c.id} className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-semibold bg-violet-500/10 text-violet-400">
+                        <span key={c.id} className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-semibold bg-rose-500/10 text-rose-400">
                           <Folder className="w-3 h-3" /> {c.name}
                         </span>
                       ))}
@@ -357,7 +357,7 @@ export default function PostManagement({ initialPosts, categories, userId }: Pos
                   <div className="flex items-center justify-end gap-2 border-t border-slate-900 pt-3">
                     <button
                       onClick={() => handleOpenEdit(p)}
-                      className="flex items-center gap-1.5 px-3 py-1.5 bg-violet-500/10 hover:bg-violet-500/20 text-violet-400 text-xs rounded-lg font-medium transition cursor-pointer"
+                      className="flex items-center gap-1.5 px-3 py-1.5 bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 text-xs rounded-lg font-medium transition cursor-pointer"
                     >
                       <Edit3 className="w-3.5 h-3.5" /> แก้ไขข่าว
                     </button>

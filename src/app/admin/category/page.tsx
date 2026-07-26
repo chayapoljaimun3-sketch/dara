@@ -105,7 +105,7 @@ export default function CategoryPage() {
         {/* Create Form */}
         <div className="bg-slate-950 border border-slate-800 p-6 rounded-2xl h-fit space-y-4">
           <h2 className="text-lg font-semibold text-white flex items-center gap-2">
-            <FolderPlus className="w-5 h-5 text-violet-400" />
+            <FolderPlus className="w-5 h-5 text-rose-400" />
             เพิ่มหมวดหมู่ใหม่
           </h2>
           <form onSubmit={handleAdd} className="space-y-4">
@@ -120,13 +120,13 @@ export default function CategoryPage() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="เช่น การเมือง, ไอที, ท่องเที่ยว"
-                className="w-full bg-slate-900 border border-slate-800 text-white rounded-lg px-3.5 py-2 text-sm focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition"
+                className="w-full bg-slate-900 border border-slate-800 text-white rounded-lg px-3.5 py-2 text-sm focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 transition"
               />
             </div>
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-violet-600 hover:bg-violet-700 active:bg-violet-800 text-white rounded-lg py-2 text-sm font-medium transition cursor-pointer disabled:opacity-50"
+              className="w-full bg-rose-600 hover:bg-rose-700 active:bg-rose-800 text-white rounded-lg py-2 text-sm font-medium transition cursor-pointer disabled:opacity-50"
             >
               {loading ? "กำลังบันทึก..." : "เพิ่มหมวดหมู่"}
             </button>
@@ -165,7 +165,7 @@ export default function CategoryPage() {
                             type="text"
                             value={editingName}
                             onChange={(e) => setEditingName(e.target.value)}
-                            className="bg-slate-900 border border-slate-700 text-white rounded px-2.5 py-1 text-sm focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500"
+                            className="bg-slate-900 border border-slate-700 text-white rounded px-2.5 py-1 text-sm focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500"
                           />
                         ) : (
                           <span className="text-white font-medium">{cat.name}</span>
@@ -194,7 +194,7 @@ export default function CategoryPage() {
                           <div className="flex items-center justify-end gap-1.5">
                             <button
                               onClick={() => handleStartEdit(cat)}
-                              className="p-1.5 bg-violet-500/10 hover:bg-violet-500/20 text-violet-400 rounded transition cursor-pointer"
+                              className="p-1.5 bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 rounded transition cursor-pointer"
                             >
                               <Edit2 className="w-4 h-4" />
                             </button>
